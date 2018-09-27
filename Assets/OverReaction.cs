@@ -134,7 +134,7 @@ public class OverReaction : MonoBehaviour
     protected void UpdateDeformEnergy()
     {
         float deformEnergyVertical = this.moveEnergy.magnitude
-                                   * Vector3.Dot(this.moveEnergy, this.crntMove);
+                                   * Vector3.Dot(this.moveEnergy.normalized, this.crntMove.normalized);
 
         float deformEnergyHorizontalRatio = deformEnergyVertical / this.maxDeformScale;
         float deformEnergyHorizontal = 1 - deformEnergyHorizontalRatio;
