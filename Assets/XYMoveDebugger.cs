@@ -14,7 +14,7 @@ public class XYMoveDebugger : MonoBehaviour
         base.transform.position = new Vector3()
         {
             x = value * (this.reverse ? -1 : 1),
-            y = value * 0.5f,
+            y = value,
             z = base.transform.position.z
         };
     }
