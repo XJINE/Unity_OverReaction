@@ -175,6 +175,16 @@ public class OverReaction : MonoBehaviour
             deformedVertices[i] = new Vector3(deformedVertices[i].x * this.deformEnergy.x,
                                               deformedVertices[i].y * this.deformEnergy.y,
                                               deformedVertices[i].z * this.deformEnergy.z);
+
+            //if (deformedVertices[i].y < 0.1f)
+            //{
+            //    float trailLength = 1f;
+            //    float trailPower  = Mathf.Max(this.deformEnergy.y - 1, 0);
+            //    float randomValue = Random.value - 0.5f;
+
+            //    deformedVertices[i].y = deformedVertices[i].y * (1 + randomValue * trailPower * trailLength);
+            //}
+
             deformedVertices[i] = moveEnergyRotation * deformedVertices[i];
             deformedVertices[i] = crntRotationI * deformedVertices[i];
         }
